@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  app:
+ app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -18,7 +18,8 @@ services:
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - app-network
-
+    user: "www-data"  # Sesuaikan dengan pengguna yang tepat di dalam container
+    
   webserver:
     image: nginx:alpine
     container_name: webserver
