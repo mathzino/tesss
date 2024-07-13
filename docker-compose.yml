@@ -17,8 +17,7 @@ services:
       - .:/var/www
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
-      - app-network
-    user: www  
+      - app-network 
 
   webserver:
     image: nginx:alpine
