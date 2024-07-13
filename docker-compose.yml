@@ -18,8 +18,8 @@ services:
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - app-network
-    user: "www-data"  # Sesuaikan dengan pengguna yang tepat di dalam container
-    
+    user: www-data  
+
   webserver:
     image: nginx:alpine
     container_name: webserver
